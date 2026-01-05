@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RizzWeb</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Latar Belakang Dekorasi Bola */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7000ff, #0011ff);
+            filter: blur(80px);
+            z-index: -1;
+        }
+
+        /* Kontainer Utama */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            animation: fadeIn 1.5s ease;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        h1 { font-weight: 600; margin-bottom: 10px; letter-spacing: 1px; }
+        p { font-weight: 300; font-size: 0.9rem; color: #ccc; margin-bottom: 30px; }
+
+        /* Tombol Link */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .link-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Dekorasi Tambahan */
+        .circle-1 { width: 300px; height: 300px; top: -10%; left: -10%; }
+        .circle-2 { width: 250px; height: 250px; bottom: -5%; right: -5%; background: #ff0080; }
+    </style>
+</head>
+<body>
+
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+
+    <div class="glass-card">
+        <img src="https://img.freepik.com/free-photo/anime-moon-landscape_23-2151645871.jpg?semt=ais_hybrid&w=740&q=80" alt="Profile Photo" class="profile-img">
+        <h1>Halo, Saya pembuat web ini</h1>
+        <p>Seorang pelajar SMP yang tertarik dengan dunia teknologi.</p>
+        
+        <div class="links">
+            <a href="https://www.instagram.com/iiikiiwww" class="link-item">Instagram</a>
+            <a href="https://github.com/iikiiiwww" class="link-item">GitHub Project</a>
+            <a href="mailto:rizkiramdahan12@gmail.com" class="link-item">Email Me</a>
+        </div>
+    </div>
+
+</body>
+</html>
